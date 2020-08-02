@@ -1,0 +1,18 @@
+# $Id: cs6706.rules,v 0.9 2020/06/26 10:17:51 Christian Gang Liu Exp $
+#-----------
+# Our Own Project RULES
+#-----------
+
+reject icmp any any -> $HOME_NET any (msg:"Potential ICMP flood attack detected"; sid:6706001; classtype:6706-icmp-flood; detection_filter:track by_dst, count 550, seconds 4;)
+reject tcp any any -> $HOME_NET 80 (flags: S; msg:"Potential SYN flood Attack detected"; flow:stateless; sid:6706002; classtype:6706-syn-flood; detection_filter:track by_dst, count 15, seco$
+
+#-----------
+# Our Own Web Vulnerabilities RULES - for 6706 course project
+#-----------
+#alert tcp any any -> $HOME_NET 80 (msg:"The system detected Sql Injection"; flow:to_server,established; uricontent:"/?id";nocase; pcre:"/(((\?id=)|(\?id%3D)).{0,}(\%3b)|(\;).{0,}((\#)|(\%2$
+reject tcp any any -> $HOME_NET 80 (msg:"The system detected command execution"; flow:to_server,established; uricontent:"/exec/"; nocase; pcre:"/((((\w*)|(\d*)|(\D*)|(.*))((\%3b)|(\;)((\w*)$
+reject tcp any any -> $HOME_NET 80 (msg:"The system detected XSS Attack"; flow:to_server,established; pcre:"/(((\%3e)+|(\%3e\%3c)+|(\%3c)+))(((\w*)([.]*|([\n]*.[\n]*)|[\r]*.[\r]*)(\w*))|((\$
+reject tcp any any -> $HOME_NET 80 (msg:"The system detected File Inclusion Attempt"; flow:to_server,established; pcre:"/(((\/?page=)|(\/?page%3D))((\w)*(http:\/\/))+(\w)*)/ix"; classtype:6$
+reject tcp any any -> $HOME_NET 80 (msg:"The system detected File Inclusion Attempt"; flow:to_server,established;uricontent:"/?page=";nocase; pcre:"/(((\/?page=)|(\/?page%3D))((((\.)|(\%2e)$
+reject tcp any any -> $HOME_NET 80 (msg:"The system detected Brutal Force"; flow:to_server,established; uricontent:"/login.php"; sid:6706008; classtype:6706-brutal-force; detection_filter:t$
+reject tcp any any -> $HOME_NET any (msg:"DELETED MISC Invalid PCAnywhere Login"; flow:to_client,established; content:"Invalid login"; classtype:unsuccessful-user; sid:6706020; rev:1;)
