@@ -2,7 +2,7 @@ import subprocess
 import json
 dict = {}
 dict.setdefault("ipAddress",[])
-with open('test.txt') as f, open('logs.json','w') as fp,open('reconstruct.txt','w') as fp1:
+with open('6706-dump-2020-07-25.pcap') as f, open('logs.json','w') as fp,open('generatedBlockList.txt','w') as fp1:
     for line in f:
         for i,ch in enumerate(line):
             if ch=='T' and line[i:i+3]=="TTL":        

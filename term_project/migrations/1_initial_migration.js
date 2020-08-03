@@ -1,5 +1,5 @@
-const Migrations = artifacts.require("Migrations");
+const BlockList = artifacts.require("BlockList");
 
 module.exports = function(deployer) {
-  deployer.deploy(Migrations);
+  deployer.deploy(BlockList);
 };

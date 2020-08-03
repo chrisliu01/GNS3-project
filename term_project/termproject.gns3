@@ -574,7 +574,7 @@
                     "console_http_path": "/",
                     "console_http_port": 80,
                     "console_resolution": "1024x768",
-                    "container_id": "98f90addbc2c1039d3e6f37cb0be860ff79771963b137ca6ef2b17679b02c65a",
+                    "container_id": "9143003e56ba36d0e97bb0db88ce7dbe9fcbc7bd22ee4da600595077decb67f9",
                     "environment": "",
                     "extra_hosts": "",
                     "extra_volumes": [
@@ -682,9 +682,9 @@
             },
             {
                 "compute_id": "vm",
-                "console": 5900,
+                "console": 5002,
                 "console_auto_start": false,
-                "console_type": "vnc",
+                "console_type": "telnet",
                 "custom_adapters": [],
                 "first_port_name": null,
                 "height": 45,
@@ -707,7 +707,7 @@
                     "console_http_path": "/",
                     "console_http_port": 80,
                     "console_resolution": "1024x768",
-                    "container_id": "10f459804d1053f32cbcd99a90deee1a29c512a0f141a11b6e2e44461c688b20",
+                    "container_id": "3d6b45911fbbab378872d9b5b9d982b262a22ce609d5ffb2928ce15b9f87567b",
                     "environment": "",
                     "extra_hosts": "",
                     "extra_volumes": [
@@ -924,6 +924,11 @@
                             "type": "ethernet"
                         },
                         {
+                            "name": "vip2",
+                            "special": false,
+                            "type": "ethernet"
+                        },
+                        {
                             "name": "virbr0",
                             "special": true,
                             "type": "ethernet"
@@ -1023,7 +1028,7 @@
                     "console_http_path": "/",
                     "console_http_port": 80,
                     "console_resolution": "1024x768",
-                    "container_id": "7771e1d563a144a327585543e9f2321a1752a15f3301f059ee9df01a052c246e",
+                    "container_id": "4dd91af473ccd8819f0fdf3fbf25625f842a04d998854574d0646ae009be6d7a",
                     "environment": "",
                     "extra_hosts": "",
                     "extra_volumes": [
@@ -1079,7 +1084,7 @@
                     "console_http_path": "/",
                     "console_http_port": 80,
                     "console_resolution": "1024x768",
-                    "container_id": "7fd2db43ac80156c8ce125066fc2c8e95cecbee4211e8769f0a5fdb69fb4723a",
+                    "container_id": "28fe7b1157d9972f35cfaf45a15ff55b5cbbf009a18efe1396a5adeb3812b7c1",
                     "environment": "",
                     "extra_hosts": "",
                     "extra_volumes": [
@@ -1134,7 +1139,7 @@
                     "console_http_path": "/",
                     "console_http_port": 80,
                     "console_resolution": "1024x768",
-                    "container_id": "b1d71693876eb16411bb2f0209679111167177ff06482b569c34ebf8b12fcd13",
+                    "container_id": "c471ca398ef666e3210ba976e1423870a7f54f4aecfc383763b668f9aa29c8aa",
                     "environment": "",
                     "extra_hosts": "",
                     "extra_volumes": [
@@ -1189,7 +1194,7 @@
                     "console_http_path": "/",
                     "console_http_port": 80,
                     "console_resolution": "1024x768",
-                    "container_id": "7da9a9ab4c61b533677b606f64b00335003dbdd645330ca3ccf985dcc1091fb6",
+                    "container_id": "f7b106202d39071f2dac8b42758d890420d6a0262b3f2ad6afe2c429e0363553",
                     "environment": "",
                     "extra_hosts": "",
                     "extra_volumes": [
@@ -1242,7 +1247,7 @@
                     "console_http_path": "/",
                     "console_http_port": 8080,
                     "console_resolution": "1024x768",
-                    "container_id": "827c03fa3878def267d2887bdc21a9fb9e189d212f575311e80db76face8880b",
+                    "container_id": "565ee11a237f683cdaf8d0eb894d253204d6036f66c4fbb573bf703e0046ff4c",
                     "environment": "",
                     "extra_hosts": "",
                     "extra_volumes": [

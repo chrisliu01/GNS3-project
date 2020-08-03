@@ -1,7 +1,7 @@
 Web3 = require('web3');
-web3 = new Web3(new Web3.providers.HttpProvider("http://192.168.0.4:7545"));
+web3 = new Web3(new Web3.providers.HttpProvider("http://172.16.1.15:7545"));
 
-code = fs.readFileSync('Ip.sol').toString();
+code = fs.readFileSync('BlockList.sol').toString();
 solc = require('solc');
 compiledCode = solc.compile(code);
 

@@ -1,6 +1,6 @@
 <?php
 
-$valid_passwords = array ("user" => "654321");
+$valid_passwords = array ("Bob" => "dragon");
 $valid_users = array_keys($valid_passwords);
 
 $user = $_SERVER['PHP_AUTH_USER'];

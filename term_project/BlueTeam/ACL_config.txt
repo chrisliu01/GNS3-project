@@ -1,0 +1,75 @@
+R2-Cisco(config)#access-list 101 deny icmp any any echo
+R2-Cisco(config)#
+R2-Cisco(config)#
+R2-Cisco(config)#acces
+R2-Cisco(config)#access-list 101 permit ip any any
+R2-Cisco(config)#
+R2-Cisco(config)#end
+R2-Cisco#
+*July  20 01:21:58.247: %SYS-5-CONFIG_I: Configured from console by console
+R2-Cisco#
+R2-Cisco#
+R2-Cisco#conf t
+Enter configuration commands, one per line.  End with CNTL/Z.
+R2-Cisco(config)#inter f0/0
+R2-Cisco(config-if)#
+R2-Cisco(config-if)#ip acces
+R2-Cisco(config-if)#ip access-group 101 in
+R2-Cisco(config-if)#
+R2-Cisco(config)#
+R2-Cisco(config)#ip access-
+R2-Cisco(config)#ip access-list exten
+R2-Cisco(config)#ip access-list extended 101
+R2-Cisco(config-ext-nacl)#
+R2-Cisco(config-ext-nacl)#permit ip host 172.16.2.13 any
+R2-Cisco(config-ext-nacl)#deny udp any any eq snmp
+R2-Cisco(config-ext-nacl)#deny udp any any eq snmptrap
+R2-Cisco(config-ext-nacl)#permit ip any any
+R2-Cisco(config-ext-nacl)#
+R2-Cisco(config-ext-nacl)#inter f0/0
+R2-Cisco(config-if)#ip acc
+R2-Cisco(config-if)#ip acce
+R2-Cisco(config-if)#ip access-group 101 in
+R2-Cisco(config-if)#end
+R2-Cisco#
+R2-Cisco#show
+*July  20 01:54:36.603: %SYS-5-CONFIG_I: Configured from console by console
+R2-Cisco#show ip acce
+R2-Cisco#show ip access-lists
+Extended IP access list 101
+    10 deny icmp any any echo (60 matches)
+    20 permit ip any any
+    30 permit ip host 172.16.2.13 any
+    40 deny udp any any eq snmp
+    50 deny udp any any eq snmptrap
+R2-Cisco#
+R2-Cisco(config)#
+R2-Cisco(config)#ip access
+R2-Cisco(config)#ip access-list ext
+R2-Cisco(config)#ip access-list extended 101
+R2-Cisco(config-ext-nacl)#
+R2-Cisco(config-ext-nacl)#permit tcp any any eq 80
+R2-Cisco(config-ext-nacl)#permit tcp any any eq 443
+R2-Cisco(config-ext-nacl)#permit tcp any any eq 22
+R2-Cisco(config-ext-nacl)#permit tcp any any eq 21
+R2-Cisco(config-ext-nacl)#
+R2-Cisco(config-ext-nacl)#int
+R2-Cisco(config-ext-nacl)#int f0/0
+R2-Cisco(config-if)#ip acc
+R2-Cisco(config-if)#ip acce
+R2-Cisco(config-if)#ip access-group 101 in
+R2-Cisco(config-if)#end
+R2-Cisco#
+*July  20 02:54:04.891: %SYS-5-CONFIG_I: Configured from console by console
+R2-Cisco#show ip acce
+R2-Cisco#show ip access-lists
+Extended IP access list 101
+    10 deny icmp any any echo (69 matches)
+    20 permit ip any any (166 matches)
+    30 permit ip host 172.16.2.13 any
+    40 deny udp any any eq snmp
+    50 deny udp any any eq snmptrap
+    60 permit tcp any any eq www
+    70 permit tcp any any eq 443
+    80 permit tcp any any eq 22
+90 permit tcp any any eq ftp

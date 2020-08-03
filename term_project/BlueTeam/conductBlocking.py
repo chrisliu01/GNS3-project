@@ -2,7 +2,7 @@ import subprocess
 import time
 
 def main():
-    with open('block.txt') as f:
+    with open('generatedBlockList.txt') as f:
         for line in f:
             subprocess.run(["sudo iptables -A INPUT -s "+line[:-1]+" -j DROP"],shell=True)
 
